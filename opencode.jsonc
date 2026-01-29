@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "catppuccin",
+  "autoupdate": true,
+  "formatter": {
+    "rubocop": {
+      "disabled": true
+    }
+  },
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "bundle exec rspec *": "allow",
+      "git": "ask",
+      "grep": "allow",
+      "rm *": "deny"
+    },
+    "edit": "ask",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "ask",
+      "*.env.*": "ask",
+      "*.env.example": "allow"
+    },
+    "skill": "allow",
+    "task": "ask",
+    "todoread": "allow",
+    "todowrite": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+  }
+}
