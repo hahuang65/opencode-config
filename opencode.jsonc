@@ -11,9 +11,20 @@
     "bash": {
       "*": "ask",
       "bundle exec rspec *": "allow",
+      "find *": "allow",
+      "git branch": "allow",
+      "git diff": "allow",
+      "git log": "allow",
+      "git show": "allow",
+      "git status": "allow",
       "git": "ask",
       "grep": "allow",
-      "rm *": "deny"
+      "ls": "allow",
+      "rm *": "deny",
+      "rspec *": "allow",
+      "test -d *": "allow",
+      "test -f *": "allow",
+      "which": "allow"
     },
     "edit": "ask",
     "glob": "allow",
@@ -23,7 +34,8 @@
       "*": "allow",
       "*.env": "ask",
       "*.env.*": "ask",
-      "*.env.example": "allow"
+      "*.env.example": "allow",
+      "*.secrets.*": "deny"
     },
     "skill": "allow",
     "task": "ask",
