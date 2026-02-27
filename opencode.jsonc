@@ -12,7 +12,9 @@
       "*": "ask",
 
       // --- Filesystem / shell basics (allow) ---
+      "cat *": "allow",
       "date *": "allow",
+      "echo *": "allow",
       "file *": "allow",
       "find *": "allow",
       "grep *": "allow",
@@ -112,10 +114,13 @@
       "ruff *": "allow",
 
       // --- Package management ---
-      "brew cat": "allow",
+      "brew --cache *": "allow",
+      "brew cat *": "allow",
       "brew list": "allow",
-      "brew info": "allow",
+      "brew list *": "allow",
+      "brew info *": "allow",
       "npm list": "allow",
+      "npm list *": "allow",
 
       // --- Terraform (allow read-only, deny apply/destroy) ---
       "terraform fmt *": "allow",
@@ -147,7 +152,9 @@
       "docs/claude/*": "allow"
     },
     "glob": "allow",
+    "glob *": "allow",
     "grep": "allow",
+    "grep *": "allow",
     "list": "allow",
     "read": {
       "*": "allow",
