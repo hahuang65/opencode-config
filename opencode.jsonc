@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "catppuccin",
   "autoupdate": true,
   "formatter": {
     "rubocop": {
@@ -13,10 +12,15 @@
       "*": "ask",
 
       // --- Filesystem / shell basics (allow) ---
+      "date *": "allow",
+      "file *": "allow",
       "find *": "allow",
       "grep *": "allow",
+      "head *": "allow",
       "ls": "allow",
       "ls *": "allow",
+      "mkdir -p docs/claude": "allow",
+      "tail *": "allow",
       "test -d *": "allow",
       "test -f *": "allow",
       "which *": "allow",
@@ -107,6 +111,12 @@
       "python -m pytest *": "allow",
       "ruff *": "allow",
 
+      // --- Package management ---
+      "brew cat": "allow",
+      "brew list": "allow",
+      "brew info": "allow",
+      "npm list": "allow",
+
       // --- Terraform (allow read-only, deny apply/destroy) ---
       "terraform fmt *": "allow",
       "terraform init *": "allow",
@@ -132,7 +142,10 @@
       "rm *": "deny",
       "rm -rf *": "deny"
     },
-    "edit": "ask",
+    "edit": {
+      "*": "ask",
+      "docs/claude/*": "allow"
+    },
     "glob": "allow",
     "grep": "allow",
     "list": "allow",
